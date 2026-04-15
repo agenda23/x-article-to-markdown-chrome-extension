@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Markdown Exporter</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>X Markdown Exporter</h1>
+
+      <p id="status" class="status">ページ判定中...</p>
+
+      <section class="options">
+        <label><input id="include-thread" type="checkbox" /> スレッド含む（準備中）</label>
+        <label><input id="save-images" type="checkbox" /> 画像をローカル保存</label>
+        <label><input id="front-matter" type="checkbox" /> Front Matter付与</label>
+      </section>
+
+      <section class="actions">
+        <button id="generate-btn" type="button">Markdown生成</button>
+        <button id="copy-btn" type="button" disabled>コピー</button>
+        <button id="save-btn" type="button" disabled>保存</button>
+      </section>
+
+      <section>
+        <label for="preview">プレビュー</label>
+        <textarea id="preview" rows="14" readonly></textarea>
+      </section>
+
+      <p id="error" class="error"></p>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

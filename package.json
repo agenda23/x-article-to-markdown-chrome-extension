@@ -1,0 +1,16 @@
+{
+  "name": "x-article-to-markdown-chrome-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension to export X posts as Markdown",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "watch": "node ./scripts/build.mjs --watch",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.315",
+    "esbuild": "^0.25.4",
+    "typescript": "^5.9.3"
+  }
+}

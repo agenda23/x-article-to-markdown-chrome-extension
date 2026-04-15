@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "X Article to Markdown",
+  "version": "0.1.0",
+  "description": "Export X post pages to Markdown.",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "host_permissions": ["https://x.com/*"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "X Markdown Exporter",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*/status/*"],
+      "js": ["content/extractor.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
